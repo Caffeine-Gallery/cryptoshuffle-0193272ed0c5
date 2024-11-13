@@ -1,0 +1,12 @@
+type CryptoData = 
+ record {
+   id: text;
+   lastUpdated: int;
+   name: text;
+   price: float64;
+   symbol: text;
+ };
+service : {
+  getCryptoData: () -> (vec CryptoData) query;
+  updateCryptoData: (vec CryptoData) -> ();
+}
